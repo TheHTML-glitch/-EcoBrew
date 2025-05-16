@@ -75,14 +75,32 @@
         }
         #plan {
             max-width: 800px;
-            margin: 25px auto 0;
+            margin: 25px auto 0  auto;
             font-weight: 600;
             color: #5d4037;
             font-size: 17px;
             text-align: center;
+            min-height: 80px;
         }
-        p {
-            font-size: 17px;
+        .business-ideas {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 35px 45px;
+            background-color: #e6d9c9;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(75, 54, 33, 0.12);
+            font-size: 18px;
+            color: #4b3621;
+            text-align: left;
+        }
+        .business-ideas h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        .business-ideas ul {
+            list-style-type: disc;
+            margin-left: 40px;
         }
     </style>
 </head>
@@ -141,41 +159,68 @@
         <div class="story-box">
             <h3>👩‍🍳 Sarah's Journey: From Home Baker to Industry Leader</h3>
             <p>
-                Sarah launched her entrepreneurial career in a small kitchen, baking artisan breads and pastries with passion. Through unwavering dedication and innovation, she expanded her venture into a successful bakery chain renowned for quality and creativity. Sarah now employs dozens of women, empowering them with meaningful jobs and mentorship, while contributing substantially to local economies.
+                Sarah’s entrepreneurial journey began in her modest home kitchen, where she passionately baked artisan breads and pastries. Facing significant challenges, including limited access to formal business training and capital, Sarah leveraged community support and dedicated herself to continuous learning. Through innovative recipes, sustainable sourcing of organic ingredients, and exceptional customer service, she expanded her bakery into a successful regional chain. Beyond business growth, Sarah actively mentors young women, offering workshops on baking and entrepreneurship, fostering an inclusive environment that inspires economic independence and community upliftment. Her commitment exemplifies how grassroots initiatives, when supported, can evolve into thriving enterprises that generate jobs and promote sustainable development.
             </p>
         </div>
 
         <div class="story-box">
             <h3>🧵 Maya's Vision: Ethical Fashion and Women Empowerment</h3>
             <p>
-                Maya began with a sewing machine and a dream to uplift her community’s artisans. By emphasizing ethical sourcing and fair wages, she built a fashion brand that supports hundreds of women, fostering sustainable livelihoods and preserving traditional crafts. Her business demonstrates how entrepreneurship can be a powerful tool for social impact.
+                Maya started her journey with a simple sewing machine and a bold vision to uplift marginalized women artisans. By focusing on ethically sourced materials and fair wages, she created a sustainable fashion brand that honors traditional craftsmanship. Maya’s business model integrates training programs, cooperative structures, and access to international markets, allowing artisans to preserve cultural heritage while generating stable incomes. Her leadership extends beyond profit — she advocates for gender equality and environmental sustainability within the fashion industry. Maya’s story illustrates the transformative power of social entrepreneurship to create dignified work, empower communities, and inspire a new generation of women business leaders.
             </p>
         </div>
 
         <div class="story-box">
             <h3>🛠️ Anita's Craftsmanship: Preserving Culture and Creating Opportunities</h3>
             <p>
-                Anita transformed a humble craft workshop into a thriving global brand that celebrates cultural artistry. Her commitment to quality and community development has created numerous job opportunities and inspired sustainable business models worldwide. Anita’s work highlights the significant role women entrepreneurs play in preserving heritage while promoting economic progress.
+                Anita’s passion for traditional crafts turned into a thriving enterprise that celebrates cultural heritage and empowers women. Starting from a small workshop, she invested in quality control, product diversification, and market research, enabling her brand to expand internationally. Anita’s approach includes collaboration with local communities, transparent supply chains, and training on sustainable production techniques. Through her efforts, dozens of women have found stable employment and leadership roles, contributing to economic resilience. Her commitment to sustainable growth highlights how entrepreneurship can balance cultural preservation with innovation, ultimately fostering inclusive development and global recognition for women-led businesses.
             </p>
         </div>
 
         <div class="story-box">
             <h3>💻 Priya's Innovation: Bridging the Digital Divide</h3>
             <p>
-                Priya’s tech startup focuses on increasing digital literacy and internet access in underserved rural regions. Her efforts have empowered thousands, especially women, with education and employment opportunities in the digital economy. Priya’s success illustrates the transformative potential of technology-driven entrepreneurship in fostering inclusion and growth.
+                Priya’s technology startup tackles digital exclusion by providing affordable internet access and digital literacy programs in underserved rural areas. Recognizing the disproportionate barriers faced by women, her company offers specialized training and mentorship to equip them with digital skills necessary for entrepreneurship. By fostering connectivity, e-commerce capabilities, and financial technology access, Priya enables women to participate actively in the digital economy, opening new pathways for income and innovation. Her vision underscores the critical role of technology-driven entrepreneurship in bridging socioeconomic gaps, promoting gender equality, and driving sustainable economic growth in the 21st century.
             </p>
         </div>
     </div>
 
+    <div class="business-ideas">
+        <h2>Business & Investment Ideas for a Sustainable Coffee Shop ☕🌱</h2>
+        <ul>
+            <li><strong>Eco-friendly Packaging:</strong> Invest in biodegradable cups and QR-coded sleeves linking to stories of women entrepreneurs and sustainability tips.</li>
+            <li><strong>Community Engagement:</strong> Host workshops and talks by local women business owners, fostering knowledge sharing and support.</li>
+            <li><strong>Fair Trade Coffee Sourcing:</strong> Partner with women-led coffee farms to ensure ethical supply chains and empower growers.</li>
+            <li><strong>Digital Loyalty Programs:</strong> Utilize app-based rewards encouraging repeat customers while educating them about women entrepreneurship.</li>
+            <li><strong>Green Energy:</strong> Invest in solar panels and energy-efficient appliances to minimize environmental impact.</li>
+            <li><strong>Social Media Campaigns:</strong> Showcase stories of women entrepreneurs and promote your coffee shop’s commitment to SDG 8.</li>
+            <li><strong>Local Artisanal Products:</strong> Collaborate with women artisans to sell handcrafted items alongside coffee.</li>
+            <li><strong>Microloan Programs:</strong> Create a fund where a percentage of profits support microloans to women entrepreneurs.</li>
+            <li><strong>Virtual Networking Events:</strong> Use QR codes to connect customers to online forums or events about entrepreneurship.</li>
+            <li><strong>Training & Internships:</strong> Provide on-site training and internship opportunities for aspiring women entrepreneurs in hospitality and business management.</li>
+        </ul>
+        <p style="text-align:center; font-weight:bold; font-size:1.2em; margin-top: 25px;">
+            Your coffee experience can spark a global movement of empowerment and sustainable growth. Join us at @EcoBrew — sip consciously, invest wisely, and brew change! ☕💡🌍
+        </p>
+    </div>
+
     <script>
         function showPlan() {
-            const amount = document.getElementById("investment").value;
+            const investment = document.getElementById("investment").value;
             const plan = document.getElementById("plan");
-            if (amount === "0") {
-                plan.textContent = "";
-                return;
+            let message = "";
+            if (investment == "0") {
+                message = "";
+            } else if (investment >= 1000 && investment <= 3000) {
+                message = `With an investment of $${investment}, you enable microfinance loans and skill training for 5-10 women entrepreneurs, directly impacting their livelihoods and community development.`;
+            } else if (investment >= 4000 && investment <= 7000) {
+                message = `An investment of $${investment} supports establishment of business incubators and mentorship programs, helping women-led startups scale efficiently and sustainably.`;
+            } else if (investment >= 8000 && investment <= 10000) {
+                message = `Investing $${investment} fuels innovative women-led enterprises in tech, fashion, and agriculture, creating hundreds of jobs and promoting systemic economic transformation.`;
+            } else {
+                message = "Thank you for your interest in supporting women entrepreneurship!";
             }
-            plan.textContent = `An investment of $${amount} facilitates micro-loans, entrepreneurship training, and market access programs, empowering women entrepreneurs to grow resilient businesses that generate sustainable income and drive economic development. Your support fosters equality and prosperity. 🌱`;
+            plan.textContent = message;
         }
     </script>
 </body>
